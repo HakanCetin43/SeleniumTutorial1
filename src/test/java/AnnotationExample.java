@@ -4,12 +4,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+import steps.Base;
 
 import java.util.List;
 
 
-public class AnnotationExample {
+public class AnnotationExample extends Base {
     WebDriver driver;
     @BeforeClass
     public static void beforeClass() throws Exception {

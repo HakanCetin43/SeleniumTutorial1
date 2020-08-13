@@ -1,20 +1,15 @@
-import org.hamcrest.core.Is;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class DatePickerExample {
     WebDriver driver;
@@ -22,12 +17,12 @@ public class DatePickerExample {
     @Before
     public void setUp() throws Exception {
         //<editor-fold desc="CHROME">
-        //System.setProperty("webdriver.chrome.driver","/Users/elifalp/Documents/WS_Selenium/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","D:/Drivers/chromedriver81.exe");
         driver = new ChromeDriver();
 //        //</editor-fold>
 
         //<editor-fold desc="FIREFOX">
-        // System.setProperty("webdriver.gecko.driver", "/Users/elifalp/Documents/WS_Selenium/drivers/geckodriver");
+        // System.setProperty("webdriver.gecko.driver", "D:\Drivers\geckodriver.exe");
         //driver = new FirefoxDriver();
         //</editor-fold>
 

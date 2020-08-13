@@ -1,4 +1,5 @@
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -6,7 +7,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ WebDriver driver;
     @Before
     public void setUp() throws Exception {
         //<editor-fold desc="CHROME">
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver81.exe");
          driver = new ChromeDriver();
 //        //</editor-fold>
 
@@ -41,7 +41,7 @@ WebDriver driver;
         WebElement table = driver.findElement(By.id("example"));
         String wholeTable = table.getText();
         //verify that Nixon is in the table.
-        Assert.assertTrue(wholeTable.contains("Nixon"),"I am looking NIXON is in the table but could not find");
+        Assert.assertTrue("I am looking NIXON is in the table but could not find", wholeTable.contains("Nixon"));
 //        Thread.sleep(6000);
     }
 
@@ -192,4 +192,3 @@ WebDriver driver;
         driver.quit();
     }
 }
-
